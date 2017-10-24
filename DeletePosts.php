@@ -5,9 +5,27 @@
 </head>
 
 <body>
+    <center><h2>Delete Posts</h2></center>
+
+    <div id="navbar">
+    Content navigation (admittedly low-quality anti-css navbar)
+    <br><a href="CreatePosts.html">Create Posts</a>
+    <br><a href="CreateUser.html">Create User</a>
+    <br><a href="AdminHome.html">Admin Home</a>
+    </div>
+    <br>
+    <br>
+
+
     <form method="post" action="DeletePostsBackend.php">
-        <table>
-            <tr><td>Post id</td><td>User id</td><td>Post content</td><td>Delete?</td></tr>
+        <table class="table">
+            <thead>
+            <th>Post id</th>
+            <th>User id</th>
+            <th>Post content</th>
+            <th>Delete?</th>
+            </thead>
+            <tbody>
             <?php
                 $mysqli = new mysqli('mysql.eecs.ku.edu', 'jhegna', 'P@$$word123', 'jhegna');
 
@@ -31,6 +49,7 @@
                     }
                 }
             ?>
+            </tbody>
         </table>
         <br>
         <input type="submit">

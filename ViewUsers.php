@@ -15,6 +15,17 @@ $page =
 <html>
 <head><title>View Users</title></head>
 <body>
+<center><h2>View Users</h2></center>
+
+<div id="navbar">
+Content navigation (admittedly low-quality anti-css navbar)
+<br><a href="CreatePosts.html">Create Posts</a>
+<br><a href="CreateUser.html">Create User</a>
+<br><a href="AdminHome.html">Admin Home</a>
+</div>
+<br>
+<br>
+
 ';
 
 if ($result = $mysqli->query($query)) {

@@ -8,6 +8,22 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
+echo
+'
+<html>
+<center><h2>Delete Posts</h2></center>
+
+<div id="navbar">
+Content navigation (admittedly low-quality anti-css navbar)
+<br><a href="CreatePosts.html">Create Posts</a>
+<br><a href="CreateUser.html">Create User</a>
+<br><a href="AdminHome.html">Admin Home</a>
+</div>
+<br>
+<br>
+
+';
+
 $query = "SELECT * FROM tb_posts;";
 if ($result = $mysqli->query($query)) {
     while ($row = $result->fetch_assoc()) {
@@ -19,5 +35,7 @@ if ($result = $mysqli->query($query)) {
         }
     }
 }
+
+echo '</html>';
 
 ?>

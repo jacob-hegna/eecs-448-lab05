@@ -8,6 +8,21 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
+echo
+'
+<html>
+<center><h2>Delete Posts</h2></center>
+
+<div id="navbar">
+Content navigation (admittedly low-quality anti-css navbar)
+<br><a href="CreatePosts.html">Create Posts</a>
+<br><a href="CreateUser.html">Create User</a>
+<br><a href="AdminHome.html">Admin Home</a>
+</div>
+<br>
+<br>
+';
+
 $query = "INSERT INTO tb_posts (content, author_id) VALUES ('" . $_POST['post_body'] . "', '" . $_POST['user_id'] . "');";
 
 if($_POST['user_id'] != '' 
@@ -17,5 +32,10 @@ if($_POST['user_id'] != ''
 } else {
     echo "Oops, something went wrong! That username either didn't exist, either field was empty, or something else went horribly wrong. Sorry!";
 }
+
+echo
+'
+</html>
+';
 
 ?>
