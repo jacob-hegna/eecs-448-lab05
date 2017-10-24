@@ -13,7 +13,7 @@ $query = "INSERT INTO tb_posts (content, author_id) VALUES ('" . $_POST['post_bo
 if($_POST['user_id'] != '' 
     && $_POST['post_body'] != ''
     && $mysqli->query($query)) {
-    echo "Nice post! The database accepted it. Hope you didn't inject anything! Note that the foreign keys in MySql on the KU server are still horribly broken, so we can't check for duplicate username :(";
+    echo "Nice post! The database accepted it. Hope you didn't inject anything! Note that the foreign keys in MySql on the KU server are still horribly broken, so we can't check for existing usernames :(";
 } else {
     echo "Oops, something went wrong! That username either didn't exist, either field was empty, or something else went horribly wrong. Sorry!";
 }
